@@ -1,0 +1,398 @@
+:root {
+  --bg-color: white;
+  --typewriterSpeed: 4s;
+  --typewriterCharacters: 24;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-padding-top: 82px;
+}
+
+body {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+
+.yellow-text {
+  color: #ecec18;
+}
+
+.shadow-bg {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  -webkit-transition: background-color 0.6s;
+  transition: background-color 0.6s;
+  z-index: 1;
+}
+
+nav .nav-link,
+nav .navbar-brand,
+nav .navbar-toggler {
+  color: black;
+}
+
+nav .nav-link:hover,
+nav .navbar-brand:hover {
+  color: #ecec18;
+}
+
+nav .navbar-brand {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+nav .fa-bars {
+  padding: 10px;
+}
+
+nav .navbar-nav {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav .navbar-nav .nav-link.active {
+  color: #ecec18;
+}
+
+header {
+  color: black;
+}
+
+header h1 {
+  font-size: 30px;
+}
+
+header h2 {
+  position: relative;
+  text-transform: uppercase;
+}
+
+header h2::before,
+header h2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+header h2::before {
+  background: var(--bg-color);
+  -webkit-animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
+          animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+header h2::after {
+  width: 0.125em;
+  background: black;
+  -webkit-animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, blink 800ms steps(var(--typewriterCharacters)) infinite;
+          animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, blink 800ms steps(var(--typewriterCharacters)) infinite;
+}
+
+@-webkit-keyframes typewriter {
+  to {
+    left: 102%;
+  }
+}
+
+@keyframes typewriter {
+  to {
+    left: 102%;
+  }
+}
+
+@-webkit-keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+header .hero-img {
+  position: relative;
+  height: 100vh;
+}
+
+header .hero-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  text-align: left;
+  z-index: 5;
+}
+
+header .btn-outline-dark {
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+header .btn-outline-dark:hover {
+  color: #ecec18;
+}
+
+header .fa-chevron-down {
+  position: absolute;
+  left: 50%;
+  -webkit-transition: translateX(-50%);
+  transition: translateX(-50%);
+  bottom: 20px;
+  font-size: 30px;
+  color: black;
+}
+
+.skills {
+  background-color: #ecec18;
+  position: relative;
+}
+
+.skills h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.skills .text-skills {
+  padding: 20px 60px;
+}
+
+.skills .text-skills p {
+  font-size: 21px;
+}
+
+.skills .content-skills {
+  padding: 20px 60px;
+}
+
+.skills .content-skills .box-skills {
+  border: 3px solid black;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.skills .content-skills .box-skills .skills-list {
+  padding: 30px;
+}
+
+.skills .content-skills .box-skills .skills-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #7f29d9;
+  border-radius: 8px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.aboutme {
+  position: relative;
+}
+
+.aboutme h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.aboutme .swiper {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.aboutme .swiper .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutme .swiper .swiper-pagination-bullet-active {
+  background-color: #ecec18;
+}
+
+.aboutme .swiper .card {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.aboutme .swiper .card .card-body {
+  height: 20rem;
+}
+
+.aboutme .swiper .card img {
+  height: 16rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.aboutme .swiper .card i {
+  padding: 10px;
+}
+
+.aboutme .swiper .card:hover {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+.aboutme .swiper .card-title {
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contact {
+  background-color: #ecec18;
+  position: relative;
+}
+
+.contact h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.contact .contact-text {
+  padding: 50px;
+}
+
+.contact .contact-text h3 {
+  font-size: 48px;
+}
+
+.contact .contact-text p {
+  padding-top: 10px;
+  font-size: 18px;
+  padding-right: 100px;
+}
+
+.contact .contact-text .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  width: 420px;
+}
+
+.contact .contact-text .icon i {
+  color: #7f29d9;
+  font-size: 40px;
+}
+
+.contact .contact-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  flex-direction: column-reverse;
+}
+
+.contact .contact-right p {
+  text-align: end;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (min-width: 375px) {
+  header h1 {
+    font-size: 36px;
+  }
+  header h2 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 42px;
+  }
+  header h2 {
+    font-size: 21px;
+  }
+  .skills h2 {
+    font-size: 30px;
+  }
+  .skills .text-skills p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  nav {
+    height: 82px;
+    font-size: 22px;
+  }
+  nav .navbar-brand {
+    font-size: 36px;
+  }
+  header h1 {
+    font-size: 72px;
+  }
+  header h2 {
+    font-size: 36px;
+  }
+  .skills h2 {
+    font-size: 52px;
+  }
+  .skills .text-skills p {
+    font-size: 18px;
+  }
+  .aboutme h2 {
+    font-size: 52px;
+  }
+  .contact h2 {
+    font-size: 52px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .skills .text-skills p {
+    font-size: 21px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
