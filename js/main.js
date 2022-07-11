@@ -60,3 +60,22 @@ const swiper = new Swiper(".swiper", {
 		},
 	},
 });
+
+//AOS//
+
+AOS.init({
+	startEvent: "DOMContentLoaded",
+	offset: 10,
+	duration: 1000,
+	once: true,
+});
+
+//FOOTER//
+const footerYear = document.querySelector(".footer__year");
+
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear();
+	footerYear.innerText = year;
+};
+
+handleCurrentYear();
