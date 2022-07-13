@@ -99,16 +99,39 @@ header {
 
 	h2::before {
 		background: var(--bg-color);
-		animation: typewriter var(--typewriterSpeed)
-			steps(var(--typewriterCharacters)) 1s forwards;
+		animation: typewriter
+			var(
+				--typewriterSpeed
+			)
+			steps(
+				var(
+					--typewriterCharacters
+				)
+			)
+			1s forwards;
 	}
 
 	h2::after {
 		width: 0.125em;
 		background: black;
-		animation: typewriter var(--typewriterSpeed)
-				steps(var(--typewriterCharacters)) 1s forwards,
-			blink 800ms steps(var(--typewriterCharacters)) infinite;
+		animation: typewriter
+				var(
+					--typewriterSpeed
+				)
+				steps(
+					var(
+						--typewriterCharacters
+					)
+				)
+				1s
+				forwards,
+			blink 800ms
+				steps(
+					var(
+						--typewriterCharacters
+					)
+				)
+				infinite;
 	}
 
 	@keyframes typewriter {
@@ -191,7 +214,8 @@ header {
 		padding: 2rem 6rem;
 
 		.box-skills {
-			border: 0.3rem solid black;
+			border: 0.3rem solid
+				black;
 			border-radius: 0.8rem;
 			background-color: #fff;
 			.skills-list {
@@ -239,7 +263,8 @@ header {
 		}
 
 		.card {
-			transition: transform 0.3s;
+			transition: transform
+				0.3s;
 
 			.card-body {
 				height: 24rem;
@@ -260,7 +285,9 @@ header {
 		}
 
 		.card:hover {
-			transform: scale(0.96);
+			transform: scale(
+				0.96
+			);
 		}
 
 		.card-title {
@@ -291,15 +318,18 @@ header {
 
 			p {
 				padding-top: 1rem;
-				padding: 0 3.2rem;
+				padding: 0
+					3.2rem;
 			}
 
 			.icon {
 				padding: 1rem;
 				i {
 					color: #7f29d9;
-					padding: 0 3rem;
-					transition: color 0.5s;
+					padding: 0
+						3rem;
+					transition: color
+						0.5s;
 				}
 
 				i:hover {
